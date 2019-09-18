@@ -1,0 +1,329 @@
+
+/**
+ * -----------------------------------------------------------------------------
+ * Site-wide Styles
+ * -----------------------------------------------------------------------------
+ */
+
+/* Default font. */
+html, body {
+	font: 16px/1.6 Roboto,Helvetica,sans-serif;
+    font-weight: 300;
+    height: 100%;
+    position: relative;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+/* All Content Boxes */
+.content {
+    margin: 0 auto;
+    max-width: 70rem;
+    min-height: 4rem;
+    position: relative;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * Main Site Header
+ * -----------------------------------------------------------------------------
+ */
+.main-header {
+    background-color: #000;
+    min-height: 4rem;
+}
+
+@media all and (min-width: 51rem) {
+	.main-header {
+	    min-height: 6rem;
+	}
+}
+
+.main-header-logo {
+	max-width: 3.25rem;
+    display: block;
+    left: 1.3rem;
+    opacity: 1;
+    position: absolute;
+    top: 0.35rem;
+    transition: opacity 0.25s;
+}
+
+@media all and (min-width: 51rem) {
+	.main-header-logo  {
+	    max-width: 4.5rem;
+	    top: 0.75rem;
+	    left: 1.3rem;
+	}
+}
+
+@media all and (min-width: 52rem) {
+	.main-header-logo  {
+	    left: 2rem;
+	}
+}
+
+.main-header-logo:hover {
+	opacity: 0.5;
+}
+
+.main-header-logo img {
+	width: 100%;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * Main Navigation Toggle
+ * -----------------------------------------------------------------------------
+ */
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.1rem;
+    transition: all 0.5s ease;
+}
+
+.menu-toggle:focus {
+	outline: none;
+}
+
+.menu-toggle span {
+    clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.menu-toggle .icon {
+	display: block;
+    fill: currentColor;
+    height: 1.75rem;
+    width: 1.75rem;
+}
+
+/* Animate menu icon (lines). */
+.menu-toggle .svg-menu-toggle .line {
+  opacity: 1;
+  transform: rotate(0) translateY(0) translateX(0);
+  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.menu-toggle.active .icon {
+    top: 0.9em;
+}
+
+.menu-toggle.active .svg-menu-toggle .line-1 {
+	transform: rotate(45deg) translateY(-1.4em) translateX(0.75em);
+}
+.menu-toggle.active .svg-menu-toggle .line-2 {
+  opacity: 0;
+}
+.menu-toggle.active .svg-menu-toggle .line-3 {
+	transform: rotate(-45deg) translateY(-0.7em) translateX(-3.2em);
+}
+
+@media all and (min-width: 51rem) {
+	.menu-toggle {
+		display: none;
+	}
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * Main Menu
+ * -----------------------------------------------------------------------------
+ */
+.main-nav {
+	height: 0;
+	overflow: hidden;
+	padding-top: 4rem;
+	transition: height 0.5s ease-out;
+}
+
+.main-nav.open {
+	height: 17.45rem;
+}
+
+.main-nav-item {
+	background-color: #212121;
+    border-bottom: solid 1px #353535;
+    color: #fff;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+.main-nav-item > ul {
+	width: 12.4rem;
+	margin: 0 auto;
+}
+
+.main-nav-item > ul:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.main-nav-item > ul > li {
+	float: left;
+}
+
+.main-nav-item > ul > li > a {
+	position: relative;
+    display: block;
+    height: 2.5rem;
+    width: 3rem;
+}
+
+.main-nav-item > ul > li > a:before {
+	content: " ";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: 0 auto;
+	background-image: url(/img/sprites.png);
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: opacity 0.25s;
+}
+
+.main-nav-item > span,
+.main-nav-item > ul > li > a span {
+	transition: opacity 0.25s;
+}
+
+.main-nav-item .email {
+    width: 3.35rem;
+}
+
+.main-nav-item .email:before {
+	background-position: -3px -11px;
+}
+
+.main-nav-item .linkedin:before {
+	background-position: -54px -11px;
+}
+
+.main-nav-item .codepen:before {
+	background-position: -101px -11px;
+}
+
+.main-nav-item .github:before {
+	background-position: -150px -11px;
+}
+
+.main-nav-item:hover span,
+.main-nav-item > ul > li > a:hover:before {
+    opacity: 0.5;
+}
+
+.main-nav-item > ul > li > a > span {
+	left: -20000px;
+	position: absolute;
+}
+
+@media all and (min-width: 51rem) {
+	.main-nav {
+    	float: right;
+    	height: 6rem;
+    	overflow: hidden;
+    	padding-top: 0;
+	}
+
+	.main-nav ul li {
+		float: left;
+	}
+
+	.main-nav-item {
+	    border: none;
+    	background: transparent;
+    	font-size: 1.15rem;
+    	line-height: 4rem;
+	}
+
+	.main-nav-item > ul {
+		padding-top: 0.74rem;
+    	width: 14.1rem;
+    	padding-left: 1.75rem;
+	}
+
+	.main-nav.open {
+		height: 4rem;
+	}
+}
+
+@media all and (min-width: 52rem) {
+	.main-nav {
+    	padding-right: 1rem;
+	}
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * Main Site Content
+ * -----------------------------------------------------------------------------
+ */
+.main-page-content {
+	flex: 1;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * Main Site Footer
+ * -----------------------------------------------------------------------------
+ */
+.main-footer {
+	background-color: #f5f5f5;
+	min-height: 6rem;
+	position: relative;
+}
+
+.main-footer-content {
+	padding: 0 2.5rem;
+}
+
+.main-footer-copyright {
+    color: #666;
+    display: block;
+    font-weight: 400;
+    line-height: 6rem;
+    text-align: center;
+}
+
+@media all and (min-width: 51rem) {
+	.main-footer-copyright {
+	    text-align: left;
+	}
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * Section Dividers
+ * -----------------------------------------------------------------------------
+ */
+.divider:before {
+	background: rgb(255,255,255);
+	background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(204,204,204,1) 100%);
+	content: " ";
+	display: block;
+	height: 0.25rem;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
