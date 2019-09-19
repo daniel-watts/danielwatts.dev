@@ -1,7 +1,16 @@
 <IfModule mod_rewrite.c>
+
+# Do not require trailing slashes on directories.
+DirectorySlash Off
+
+# Turn-on the `mod_rewrite` module.
 RewriteEngine On
-RewriteRule ^(.*)/$ /$1 [L,R=301] # This enforces NO trailing slashes
+
+# 301 redirect to the same URL with no trailing slash.
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# All non-file requests get handled by `index.php`.
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
+
 </IfModule>
