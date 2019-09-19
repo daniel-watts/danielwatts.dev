@@ -26,6 +26,11 @@ This site was hand-typed from scratch with honorable intentions.
 
 © 2019 by Daniel Watts
 
+This site was inspired by:
+- http://www.adhamdannaway.com/
+- https://jtom.me/portfolio/
+- https://www.ybrikman.com/
+
 --> 
 <!DOCTYPE html>
 <html lang="en">
