@@ -37,6 +37,7 @@ if (!defined('DOC_ROOT')) {
 require(DOC_ROOT . '/inc/data.php');
 $request = route_request($projects);
 
-require(DOC_ROOT . '/inc/page_top.php');
+// Default DOC title.
+$request['page_title'] = 'Daniel Watts - Web Developer Portfolio';
+
 require(DOC_ROOT . '/inc/' . $request['template'] . '.php');
-require(DOC_ROOT . '/inc/page_bottom.php');

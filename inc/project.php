@@ -1,6 +1,8 @@
 <?php
 
 $project_data = $projects[$request['project_key']];
+$request['page_title'] = $project_data['title'] . ' - Web Project';
+require(DOC_ROOT . '/inc/page_top.php');
 
 ?>
 <div id="project-page" class="project-page">
@@ -32,3 +34,4 @@ $project_data = $projects[$request['project_key']];
 		</div>
 	</div>
 </div>
+<?php require(DOC_ROOT . '/inc/page_bottom.php'); ?>

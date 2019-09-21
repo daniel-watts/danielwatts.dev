@@ -1,4 +1,9 @@
+<?php
 
+$request['page_title'] = '2019 Resume';
+require(DOC_ROOT . '/inc/page_top.php');
+
+?>
 <div id="resume-page" class="resume-page">
 	<div class="resume-page-content content">
 
@@ -23,3 +28,4 @@
 
 	</div>
 </div>
+<?php require(DOC_ROOT . '/inc/page_bottom.php'); ?>

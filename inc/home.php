@@ -1,4 +1,4 @@
-
+<?php require(DOC_ROOT . '/inc/page_top.php'); ?>
     		<section class="splash">
     			<div class="splash-content content">
     				<img class="splash-pic" alt="A portrait of Daniel Watts smiling with a sort of cheezy expression." src="/img/daniel.jpg">
@@ -119,3 +119,5 @@
                 </div>
 
             </section>
+<?php require(DOC_ROOT . '/inc/page_bottom.php'); ?>
+

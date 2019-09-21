@@ -37,7 +37,7 @@ This site was inspired by:
     <head>
 
         <meta charset="UTF-8">
-        <title>Daniel Watts - Web Developer Portfolio</title>
+        <title><?php echo $request['page_title']; ?></title>
 
         <!-- Display -->
         <meta content="width=device-width" name="viewport">
