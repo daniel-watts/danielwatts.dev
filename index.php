@@ -1,10 +1,5 @@
 <?php
 
-// Report all PHP errors.
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 function route_request($projects)
 {
 	// All requests are 404 by default.
@@ -26,6 +21,10 @@ function route_request($projects)
 				'project_key' => $url_path_parts[1],
 			);
 		}
+	}
+
+	if ($url_path_parts[0] == 'resume' && !isset($url_path_parts[1])) {
+		return array('template' => 'resume');
 	}
 
 	return $return;

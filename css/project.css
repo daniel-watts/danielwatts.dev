@@ -19,13 +19,9 @@
 }
 
 .project-image {
-	-ms-interpolation-mode: bicubic;
     border: #ccc;
     border: solid 1px rgba(0,0,0,0.06);
     border-width: 1px 1px 0 1px;
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
 }
 
 .project-page-title,

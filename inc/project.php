@@ -7,15 +7,15 @@ $project_data = $projects[$request['project_key']];
 	<div class="project-page-content content">
 
 		<header class="project-page-info">
-			<h1 class="project-page-title"><?php echo $project_data['title']; ?></h1>
+			<h1 class="page-title"><?php echo $project_data['title']; ?></h1>
 			<?php if ($project_data['subtitle'] != '') : ?><span class="project-page-subtitle"><?php echo $project_data['subtitle']; ?></span><?php endif; ?>
             <?php if ($project_data['datetxt'] != '') : ?><span class="project-page-date"><?php echo $project_data['datetxt']; ?></span><?php endif; ?>
-            <?php if ($project_data['desc'] != '') : ?><span class="project-page-description"><?php echo $project_data['desc']; ?></span><?php endif; ?>
+            <?php if ($project_data['desc'] != '') : ?><span class="project-page-description text"><?php echo $project_data['desc']; ?></span><?php endif; ?>
             <!-- <?php if ($project_data['tech'] != '') : ?><span class="project-page-tech"><?php echo $project_data['tech']; ?></span><?php endif; ?> -->
 		</header>
 
 		<div class="project-page-image">
-			<img class="project-image" alt="An image of the project." src="/images/<?php echo $project_data['thumb']; ?>" />
+			<img class="project-image responsive-image" alt="An image of the project." src="/images/<?php echo $project_data['thumb']; ?>" />
 		</div>
 
 	</div>

@@ -18,7 +18,7 @@
 
     					<li class="featured-project-item-wrapper">
     						<a class="featured-project-item" href="/projects/<?php echo $projects[$fpid]['project']; ?>">
-	    						<img class="featured-project-item-image" alt="An image of the project." src="/images/<?php echo $projects[$fpid]['thumb']; ?>" />
+	    						<img class="featured-project-item-image responsive-image" alt="An image of the project." src="/images/<?php echo $projects[$fpid]['thumb']; ?>" />
 	    						<span class="featured-project-item-title"><?php echo $projects[$fpid]['title']; ?></span>
 	    						<span class="featured-project-item-category"><?php echo $projects[$fpid]['subtitle']; ?></span>
     						</a>
@@ -63,9 +63,9 @@
 
                                     <?php if ($pdata['tech'] != '') : ?><span class="project-item-tech"><?php echo $pdata['tech']; ?></span><?php endif; ?>
 
-                                    <?php if ($pdata['desc'] != '') : ?><span class="project-item-description"><?php echo $pdata['desc']; ?></span><?php endif; ?>
+                                    <?php if ($pdata['desc'] != '') : ?><span class="project-item-description text"><?php echo $pdata['desc']; ?></span><?php endif; ?>
 
-                                    <?php if ($pdata['thumb'] != '') : ?><img class="project-item-image" alt="An image of the project." src="/images/<?php echo $pdata['thumb']; ?>" /><?php endif; ?>
+                                    <?php if ($pdata['thumb'] != '') : ?><img class="project-item-image responsive-image" alt="An image of the project." src="/images/<?php echo $pdata['thumb']; ?>" /><?php endif; ?>
 
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                                 <nav class="profile-nav">
                                     <h3 class="profile-nav-title">Assets</h3>
                                     <ul>
-                                        <li class="item-resume item"><a class="item-link" target="_blank" href="/resume/Daniel-Watts-Web-Developer-Resume-2019.pdf"><span>Resume</span></a></li>
+                                        <li class="item-resume item"><a class="item-link" target="_blank" href="/resume"><span>Resume</span></a></li>
                                         <li class="item-devwattswork item"><a class="item-link" target="_blank" href="https://dev.wattswork.com/"><span>Devblog</span></a></li>
                                         <li class="item-devnews item"><a class="item-link" target="_blank" href="https://www.facebook.com/web.developer.info/"><span>Dev News</span></a></li>
                                     </ul>

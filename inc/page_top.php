@@ -59,8 +59,10 @@ This site was inspired by:
 
 		require(DOC_ROOT . '/css/reset.css');
 		require(DOC_ROOT . '/css/site.css');
+		require(DOC_ROOT . '/css/text.css');
 		if ($request['template'] == 'home') { require(DOC_ROOT . '/css/home.css'); }
 		if ($request['template'] == 'project') { require(DOC_ROOT . '/css/project.css'); }
+		if ($request['template'] == 'resume') { require(DOC_ROOT . '/css/resume.css'); }
 
 		?>
 
