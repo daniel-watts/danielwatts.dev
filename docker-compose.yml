@@ -1,0 +1,37 @@
+# Project name (replaces the default "website" derived from the folder).
+# Note: Compose project names can't contain dots, so this uses a hyphen.
+name: danielwatts-dev
+
+services:
+  # Production: static site served by nginx. Started by default.
+  website:
+    build:
+      context: .
+      target: runtime
+    image: danielwatts-dev
+    container_name: danielwatts.dev
+    ports:
+      # Visit http://localhost:8080  (change the left number to use another port)
+      - "8080:80"
+    restart: unless-stopped
+
+  # Development: live hot-reload server. Only runs with the "dev" profile:
+  #   docker compose --profile dev up dev
+  dev:
+    profiles: ["dev"]
+    build:
+      context: .
+      target: dev
+    image: danielwatts-dev-dev
+    container_name: danielwatts.dev-dev
+    ports:
+      # Visit http://localhost:4321
+      - "4321:4321"
+    volumes:
+      # Mount source for live editing; keep the container's node_modules + .astro
+      - ./:/app
+      - /app/node_modules
+      - /app/.astro
+    environment:
+      # Reliable file-change detection across the macOS <-> container mount
+      - CHOKIDAR_USEPOLLING=true

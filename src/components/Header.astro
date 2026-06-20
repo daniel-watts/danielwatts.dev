@@ -1,0 +1,84 @@
+---
+import { site } from "../data/site";
+
+const navLinks = [
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Featured", href: "#featured" },
+  { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" },
+];
+---
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label={`${site.name} — home`}>
+      {site.name}
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        {
+          navLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: color-mix(in srgb, var(--color-bg) 88%, transparent);
+    backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 4rem;
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 1.0625rem;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .brand:hover {
+    color: var(--color-accent);
+  }
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-list a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    padding: 0.25rem 0;
+  }
+  .nav-list a:hover {
+    color: var(--color-accent);
+  }
+  /* Hide the text nav on very small screens — the links remain reachable
+     from the page sections, and the layout stays clean. */
+  @media (max-width: 32rem) {
+    nav[aria-label="Primary"] {
+      display: none;
+    }
+  }
+</style>

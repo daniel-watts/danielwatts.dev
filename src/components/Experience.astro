@@ -1,0 +1,90 @@
+---
+import { experience } from "../data/site";
+---
+
+<section id="experience" class="section" aria-labelledby="experience-heading">
+  <div class="container">
+    <p class="eyebrow">Experience</p>
+    <h2 id="experience-heading">Where I've worked</h2>
+    <ol class="timeline">
+      {
+        experience.map((job) => (
+          <li class="entry">
+            <div class="entry-head">
+              <h3>
+                {job.role} ·{" "}
+                {job.companyUrl ? (
+                  <a href={job.companyUrl} rel="noopener noreferrer">
+                    {job.company}
+                  </a>
+                ) : (
+                  <span>{job.company}</span>
+                )}
+              </h3>
+              <p class="period">{job.period}</p>
+            </div>
+            <p class="summary">{job.summary}</p>
+            {job.highlights?.length > 0 && (
+              <ul class="highlights">
+                {job.highlights.map((h) => (
+                  <li>{h}</li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
+
+<style>
+  .timeline {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 2rem;
+  }
+  .entry {
+    border-left: 2px solid var(--color-border);
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .entry::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 0.4rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-accent);
+  }
+  .entry-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.25rem 1rem;
+  }
+  .entry-head h3 {
+    margin: 0;
+  }
+  .period {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    white-space: nowrap;
+  }
+  .summary {
+    margin-top: 0.5rem;
+  }
+  .highlights {
+    margin-top: 0.75rem;
+    display: grid;
+    gap: 0.35rem;
+    color: var(--color-text-muted);
+  }
+</style>

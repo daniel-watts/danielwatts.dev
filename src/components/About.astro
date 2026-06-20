@@ -1,0 +1,25 @@
+---
+import { about } from "../data/site";
+---
+
+<section id="about" class="section section-alt" aria-labelledby="about-heading">
+  <div class="container">
+    <p class="eyebrow">About</p>
+    <h2 id="about-heading">{about.heading}</h2>
+    <div class="prose">
+      {about.paragraphs.map((para) => <p>{para}</p>)}
+    </div>
+  </div>
+</section>
+
+<style>
+  .prose {
+    max-width: 42rem;
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1.25rem;
+  }
+  .prose p {
+    font-size: 1.0625rem;
+  }
+</style>

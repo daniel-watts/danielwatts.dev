@@ -1,0 +1,26 @@
+---
+import { projects } from "../data/site";
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<section id="projects" class="section" aria-labelledby="projects-heading">
+  <div class="container">
+    <p class="eyebrow">Work</p>
+    <h2 id="projects-heading">Project timeline</h2>
+    <p class="section-intro">A timeline of web projects I've helped make.</p>
+    <ul class="grid">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .grid {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  }
+</style>

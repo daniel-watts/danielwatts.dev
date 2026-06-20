@@ -1,0 +1,32 @@
+---
+import { projects } from "../data/site";
+import ProjectCard from "./ProjectCard.astro";
+
+const featured = projects.filter((p) => p.featured);
+---
+
+<section
+  id="featured"
+  class="section section-alt"
+  aria-labelledby="featured-heading"
+>
+  <div class="container">
+    <p class="eyebrow">Work</p>
+    <h2 id="featured-heading">Featured projects</h2>
+    <p class="section-intro">A few of the projects I'm most proud of.</p>
+    <ul class="grid">
+      {featured.map((project) => <ProjectCard project={project} />)}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .grid {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  }
+</style>
