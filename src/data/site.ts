@@ -136,7 +136,7 @@ export const projects = [
     category: "Applied AI / retrieval",
     date: "2026",
     featured: true,
-    description: "A self-hosted retrieval-augmented-generation bot answering questions over an internal Confluence wiki. Hybrid full-text and embedding retrieval with hierarchy-aware chunking, incremental sync, a local LLM via Ollama, and an 81-test suite. Indexes 793 wiki pages in ~13 minutes on CPU.",
+    description: "A self-hosted retrieval-augmented-generation bot answering questions over an internal Confluence wiki. Hybrid full-text and embedding retrieval with hierarchy-aware chunking, incremental sync, a local LLM via Ollama, and an 81-test suite.",
     tech: ["Python", "PostgreSQL", "Embeddings", "Ollama", "Confluence API", "pytest"],
   },
   {

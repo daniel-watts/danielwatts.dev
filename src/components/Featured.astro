@@ -17,23 +17,53 @@ const featured = projects.filter((p) => p.featured);
     <ul class="grid">
       {featured.map((project) => <ProjectCard project={project} />)}
     </ul>
-    <p class="timeline-link">
-      <a href="/timeline">View a timeline of my work →</a>
-    </p>
+    <div class="timeline-cta">
+      <a class="timeline-button" href="/timeline">
+        <span class="label">More work</span>
+        <span class="value">Past Projects</span>
+      </a>
+      <p class="timeline-note">A timeline of my past projects.</p>
+    </div>
   </div>
 </section>
 
 <style>
-  .timeline-link {
+  .timeline-cta {
     margin: 2rem 0 0;
-    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.25rem;
   }
-  .timeline-link a {
-    color: var(--color-accent);
+  .timeline-button {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1rem 1.25rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
     text-decoration: none;
+    transition: border-color var(--transition), transform var(--transition);
   }
-  .timeline-link a:hover {
-    text-decoration: underline;
+  .timeline-button:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+  .timeline-button .label {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    font-weight: 600;
+  }
+  .timeline-button .value {
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+  .timeline-note {
+    margin: 0;
+    color: var(--color-text-muted);
   }
   .grid {
     list-style: none;
