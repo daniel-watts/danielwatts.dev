@@ -528,8 +528,8 @@ export const contact = {
   email: "daniel@danielwatts.dev",
   github: "https://github.com/daniel-watts?tab=repositories",
   linkedin: "https://www.linkedin.com/in/daniel-watts-87643618/",
-  /** Optional: link to your dev blog. Leave "" to hide. */
-  blog: "https://dev.wattswork.com/",
+  /** Optional: link to your dev notes site. Leave "" to hide. */
+  blog: "https://notes.danielwatts.dev/",
   /** Optional: a downloadable CV/resume in /public, e.g. "/resume.pdf". Leave "" to hide. */
   resume: "/resume.pdf",
 };

@@ -5,7 +5,7 @@ const links = [
   contact.email && { label: "Email", href: `mailto:${contact.email}`, text: contact.email },
   contact.github && { label: "GitHub", href: contact.github, text: "GitHub" },
   contact.linkedin && { label: "LinkedIn", href: contact.linkedin, text: "LinkedIn" },
-  contact.blog && { label: "Dev Blog", href: contact.blog, text: "Dev Blog" },
+  contact.blog && { label: "Dev Notes", href: contact.blog, text: "Dev Notes" },
   contact.resume && { label: "Résumé", href: contact.resume, text: "Download résumé" },
 ].filter(Boolean) as { label: string; href: string; text: string }[];
 ---

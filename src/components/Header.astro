@@ -13,8 +13,9 @@ const navLinks = [
 
 <header class="header">
   <div class="container header-inner">
-    <a class="brand" href="/" aria-label={`${site.name} — home`}>
-      {site.name}
+    <a class="brand" href="/" aria-label={`${site.name} home`}>
+      <img class="brand-logo" src="/img/wattswork.svg" alt="" width="28" height="28" />
+      <span>{site.name}</span>
     </a>
     <nav aria-label="Primary">
       <ul class="nav-list">
@@ -47,11 +48,19 @@ const navLinks = [
     min-height: 4rem;
   }
   .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-weight: 700;
     font-size: 1.0625rem;
     letter-spacing: -0.01em;
     color: var(--color-text);
     text-decoration: none;
+  }
+  .brand-logo {
+    width: 1.75rem;
+    height: 1.75rem;
+    flex-shrink: 0;
   }
   .brand:hover {
     color: var(--color-accent);
