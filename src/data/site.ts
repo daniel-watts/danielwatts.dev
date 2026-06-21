@@ -16,8 +16,8 @@ export const site = {
   url: "https://danielwatts.dev",
   /** One-sentence description used for SEO and social previews. */
   description:
-    "Senior software engineer with 20+ years building and modernizing production web applications — UI/UX through back end and infrastructure — now focused on applied AI engineering.",
-  /** Where you're based — shown in the hero and structured data. */
+    "Senior software engineer with 20+ years building and modernizing production web applications, spanning UI/UX, back end, and infrastructure, now focused on applied AI engineering.",
+  /** Where you're based, shown in the hero and structured data. */
   location: "Lafayette, CO",
   /**
    * Social/contact preview image, relative to /public.
@@ -29,10 +29,10 @@ export const site = {
 /** The big intro at the top of the page. */
 export const hero = {
   /** A short, punchy headline. */
-  headline: "Senior software engineer — full-stack web and applied AI.",
+  headline: "Senior software engineer: full-stack web and applied AI.",
   /** A sentence or two expanding on the headline. */
   subhead:
-    "20+ years building and modernizing production web applications end to end — UI/UX through back end and infrastructure — and building with AI every day.",
+    "20+ years building and modernizing production web applications end to end, from UI/UX through back end and infrastructure, and building with AI every day.",
   /** Call-to-action buttons. */
   primaryCta: { label: "View my work", href: "#featured" },
   secondaryCta: { label: "Get in touch", href: "#contact" },
@@ -42,9 +42,9 @@ export const hero = {
 export const about = {
   heading: "About me",
   paragraphs: [
-    "I'm a senior software engineer with 20+ years building and modernizing production web applications. I started in design, so my work spans the whole experience — UI/UX and front end through back end and infrastructure — and I tend to own things end to end: architecture, code, deployment, security, documentation, and the stakeholder side.",
-    "At NSF NCAR I'm the sole developer and project lead of an organization-wide visitor-management platform: I architected it, designed its workflows and interfaces, containerized it, and have shipped 60+ production releases into a NIST 800-171 CUI-compliant environment. Before that I spent 13 years at Sounds True building custom course, commerce, and live-streaming media platforms — including systems that served 30,000 users in a single day.",
-    "These days I build with AI daily: custom Claude Code agent skills, AI-assisted modernization of legacy code, and a self-hosted RAG retrieval pipeline, alongside writing my organization's AI guidance. The throughline across 20 years is the same — learn a new technology fast, then specify, verify, and own what I ship.",
+    "I'm a senior software engineer with 20+ years building and modernizing production web applications. I started in design, so my work spans the whole experience, from UI/UX and front end through back end and infrastructure. I tend to own things end to end: architecture, code, deployment, security, documentation, and the stakeholder side.",
+    "At NSF NCAR I'm the sole developer and project lead of an organization-wide visitor-management platform. I architected it, designed its workflows and interfaces, containerized it, and have shipped 60+ production releases into a NIST 800-171 CUI-compliant environment. Before that I spent 13 years at Sounds True building custom course, commerce, and live-streaming media platforms, including systems that served 30,000 users in a single day.",
+    "These days I build with AI daily: custom Claude Code agent skills, AI-assisted modernization of legacy code, and a self-hosted RAG retrieval pipeline, alongside writing my organization's AI guidance. The throughline across 20 years is the same: learn a new technology fast, then specify, verify, and own what I ship.",
   ],
 };
 
@@ -54,13 +54,13 @@ export const experience = [
     role: "Software Engineer / Programmer II",
     company: "UCAR / NSF NCAR",
     companyUrl: "https://ncar.ucar.edu",
-    period: "2019 — Present",
+    period: "2019 - Present",
     summary:
       "Sole developer and project lead of the visitor-management platform used across all NSF NCAR labs, plus the lab's broader administrative application suite. Recognized with an NCAR Special Recognition Award (2026).",
     highlights: [
       "Architected and built an organization-wide visitor-management platform from scratch; in continuous production with 60+ solo, end-to-end releases.",
       "Generalized a single-lab tool into a config-driven, multi-tenant platform now serving 8+ NCAR labs.",
-      "Ran a zero-data-loss production cutover — migrated 3,113 visit records and 8,799 users with smoke tests, 35 preserved URLs, and DNS repointing.",
+      "Ran a zero-data-loss production cutover, migrating 3,113 visit records and 8,799 users with smoke tests, 35 preserved URLs, and DNS repointing.",
       "Modernized the stack end to end: PHP 7.1→8.3, Composer/Symfony, SVN→Git, a containerized dev environment, and SAML 2.0 SSO against Azure Entra ID.",
       "Build with AI daily: custom Claude Code agent skills, a self-hosted RAG Slack bot, AI-assisted legacy modernization, and the org's AI guidance docs.",
     ],
@@ -69,11 +69,11 @@ export const experience = [
     role: "Senior Web Application Developer",
     company: "Sounds True",
     companyUrl: "https://www.soundstrue.com",
-    period: "2017 — 2019",
+    period: "2017 - 2019",
     summary:
       "Principal developer for the custom online courses and events platform; managed media-delivery infrastructure and mentored junior developers.",
     highlights: [
-      "Led the course platform from prototype to production — a custom JavaScript single-page app on a LAMP/AWS back end that handled 30,000 users in a single day for live broadcasts.",
+      "Led the course platform from prototype to production: a custom JavaScript single-page app on a LAMP/AWS back end that handled 30,000 users in a single day for live broadcasts.",
       "Built a migration tool that moved 100+ courses and 130,000 user accounts, operable by front-end developers themselves.",
       "Engineered a schedulable multi-video delivery player that automated a manual broadcast process, saving 40–50 hours per month.",
     ],
@@ -82,11 +82,11 @@ export const experience = [
     role: "Web Application Developer",
     company: "Sounds True",
     companyUrl: "https://www.soundstrue.com",
-    period: "2011 — 2017",
+    period: "2011 - 2017",
     summary:
       "Led the front-end team, then moved to back-end development; Agile/Scrum throughout.",
     highlights: [
-      "Implemented the company-wide online media management system (JW Platform, AWS S3) — ~$120,000/year in savings and 30+ TB/month of adaptive streaming.",
+      "Implemented the company-wide online media management system (JW Platform, AWS S3), saving ~$120,000/year and serving 30+ TB/month of adaptive streaming.",
       "Built and ran a live streaming broadcast system supporting 30,000+ concurrent viewers (PHP, JavaScript, Cassandra, AWS, Akamai).",
       "Replatformed three major systems including two ecommerce sites; conceived a radio app that added ~$40,000/year in new revenue.",
     ],
@@ -95,11 +95,11 @@ export const experience = [
     role: "Web Developer",
     company: "Sounds True",
     companyUrl: "https://www.soundstrue.com",
-    period: "2006 — 2011",
+    period: "2006 - 2011",
     summary:
       "Launched the company's first digital product and its first live online video broadcast.",
     highlights: [
-      "Built the company's first digital product — a custom online audio download store — and its first live online video broadcast.",
+      "Built the company's first digital product, a custom online audio download store, plus its first live online video broadcast.",
       "Managed email marketing to lists of up to 100,000, averaging ~$40,000/month in direct revenue.",
       "Cut course design implementation from 2–3 days to 2–3 hours per course with templated assets and automated delivery.",
     ],
@@ -107,11 +107,11 @@ export const experience = [
   {
     role: "Founder & Web Developer / Designer",
     company: "TinkerMedia & earlier studios",
-    period: "2000 — 2006",
+    period: "2000 - 2006",
     summary:
       "Founded a freelance web and media studio serving 20+ small-business clients; earlier, multimedia and design roles at Zeitgeist Design and E-Vitro/DigitalMed.",
     highlights: [
-      "Ran full-stack web development and design for 20+ clients on LAMP/cPanel — sites, ecommerce, Flash animation, and internet marketing.",
+      "Ran full-stack web development and design for 20+ clients on LAMP/cPanel: sites, ecommerce, Flash animation, and internet marketing.",
       "Built rich internet applications and brand/identity work at a Boulder design firm.",
     ],
   },
@@ -126,9 +126,9 @@ export const projects = [
   {
     title: "NRIT Visit App",
     category: "Multi-tenant platform",
-    date: "2024 — Present",
+    date: "2024 - Present",
     featured: true,
-    description: "An organization-wide visitor-management platform serving all NSF NCAR labs. Config-driven multi-tenant architecture, containerized, with SAML SSO and a NIST 800-171 CUI-compliant production deployment. Architect and lead developer — recognized with an NCAR Special Recognition Award.",
+    description: "An organization-wide visitor-management platform serving all NSF NCAR labs. Config-driven multi-tenant architecture, containerized, with SAML SSO and a NIST 800-171 CUI-compliant production deployment. Architect and lead developer, recognized with an NCAR Special Recognition Award.",
     tech: ["PHP 8.3", "MariaDB", "Symfony", "SAML 2.0 SSO", "Docker", "Caddy", "REST APIs"],
   },
   {
@@ -143,14 +143,14 @@ export const projects = [
     title: "Claude Code Agent Skills",
     category: "Applied AI / agent workflows",
     date: "2026",
-    description: "Custom Claude Code agent skills that maintain organizational AI documentation. Each parses unstructured input — websites, GitHub READMEs, wiki and KB pages — classifies it against tracker state, and proposes reviewed edits before writing.",
+    description: "Custom Claude Code agent skills that maintain organizational AI documentation. Each parses unstructured input (websites, GitHub READMEs, wiki and KB pages), classifies it against tracker state, and proposes reviewed edits before writing.",
     tech: ["Claude Code", "Agent skills", "MCP"],
   },
   {
     title: "RAL-IT Portal & “App Engine”",
     category: "Custom PHP MVC platform",
-    date: "2020 — 2024",
-    description: "A centralized administrative platform replacing undocumented legacy intranet apps, built on a custom PHP MVC framework — routing, auth, a form engine, and reusable AJAX table widgets — integrating Workday, the person directory, and Request Tracker via automated cron pipelines.",
+    date: "2020 - 2024",
+    description: "A centralized administrative platform replacing undocumented legacy intranet apps, built on a custom PHP MVC framework (routing, auth, a form engine, and reusable AJAX table widgets) integrating Workday, the person directory, and Request Tracker via automated cron pipelines.",
     tech: ["PHP", "MariaDB", "Custom MVC", "REST APIs", "Cron pipelines"],
   },
   {
