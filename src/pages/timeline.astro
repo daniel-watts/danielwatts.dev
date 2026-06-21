@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout
+  title={`Project timeline — ${site.name}`}
+  description="A timeline of web projects Daniel Watts has helped make."
+>
+  <span id="top"></span>
+  <Header />
+  <main id="main">
+    <Projects />
+  </main>
+  <Footer />
+</BaseLayout>

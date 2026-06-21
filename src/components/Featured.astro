@@ -17,10 +17,24 @@ const featured = projects.filter((p) => p.featured);
     <ul class="grid">
       {featured.map((project) => <ProjectCard project={project} />)}
     </ul>
+    <p class="timeline-link">
+      <a href="/timeline">View a timeline of my work →</a>
+    </p>
   </div>
 </section>
 
 <style>
+  .timeline-link {
+    margin: 2rem 0 0;
+    font-weight: 500;
+  }
+  .timeline-link a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .timeline-link a:hover {
+    text-decoration: underline;
+  }
   .grid {
     list-style: none;
     margin: 2rem 0 0;

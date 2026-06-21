@@ -2,18 +2,18 @@
 import { site } from "../data/site";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Featured", href: "#featured" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Featured", href: "/#featured" },
+  { label: "Timeline", href: "/timeline" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Contact", href: "/#contact" },
 ];
 ---
 
 <header class="header">
   <div class="container header-inner">
-    <a class="brand" href="#top" aria-label={`${site.name} — home`}>
+    <a class="brand" href="/" aria-label={`${site.name} — home`}>
       {site.name}
     </a>
     <nav aria-label="Primary">
