@@ -11,14 +11,14 @@ export const site = {
   /** Used in <title>, the logo, structured data, and copyright. */
   name: "Daniel Watts",
   /** Short professional title shown under your name. */
-  role: "Web Developer",
+  role: "Senior Software Engineer",
   /** Production URL (also set in astro.config.mjs `site`). */
   url: "https://danielwatts.dev",
   /** One-sentence description used for SEO and social previews. */
   description:
-    "Full-stack web developer with an extensive portfolio spanning custom CMS platforms, media-player web apps, live broadcasting systems, and UI/UX across many technologies.",
+    "Senior software engineer with 20+ years building and modernizing production web applications — UI/UX through back end and infrastructure — now focused on applied AI engineering.",
   /** Where you're based — shown in the hero and structured data. */
-  location: "London, UK",
+  location: "Lafayette, CO",
   /**
    * Social/contact preview image, relative to /public.
    * Recommended size: 1200×630px. Replace with your own image.
@@ -29,12 +29,12 @@ export const site = {
 /** The big intro at the top of the page. */
 export const hero = {
   /** A short, punchy headline. */
-  headline: "Full-stack web developer — apps, UI/UX, and media.",
+  headline: "Senior software engineer — full-stack web and applied AI.",
   /** A sentence or two expanding on the headline. */
   subhead:
-    "I build custom platforms, media-player web apps, and live broadcasting systems end to end, from design through to deployment.",
+    "20+ years building and modernizing production web applications end to end — UI/UX through back end and infrastructure — and building with AI every day.",
   /** Call-to-action buttons. */
-  primaryCta: { label: "View my work", href: "#projects" },
+  primaryCta: { label: "View my work", href: "#featured" },
   secondaryCta: { label: "Get in touch", href: "#contact" },
 };
 
@@ -42,50 +42,77 @@ export const hero = {
 export const about = {
   heading: "About me",
   paragraphs: [
-    "I'm a full-stack web developer with an extensive portfolio spanning design and development across many platforms and technologies. I've built custom CMS platforms, media-player web apps, live-events and broadcasting systems, and admin tools — owning projects end to end from UI/UX through to back-end integration.",
-    "Much of my work has centred on streaming and audio media: on-demand and live video, large audio libraries, and the back-end systems and third-party integrations (AWS, JW Player/JW Platform, REST APIs) that make them scale.",
-    "I'm currently exploring Progressive Web Apps and modern JavaScript frameworks — Angular, Node.js, React, and Vue — for personal projects.",
+    "I'm a senior software engineer with 20+ years building and modernizing production web applications. I started in design, so my work spans the whole experience — UI/UX and front end through back end and infrastructure — and I tend to own things end to end: architecture, code, deployment, security, documentation, and the stakeholder side.",
+    "At NSF NCAR I'm the sole developer and project lead of an organization-wide visitor-management platform: I architected it, designed its workflows and interfaces, containerized it, and have shipped 60+ production releases into a NIST 800-171 CUI-compliant environment. Before that I spent 13 years at Sounds True building custom course, commerce, and live-streaming media platforms — including systems that served 30,000 users in a single day.",
+    "These days I build with AI daily: custom Claude Code agent skills, AI-assisted modernization of legacy code, and a self-hosted RAG retrieval pipeline, alongside writing my organization's AI guidance. The throughline across 20 years is the same — learn a new technology fast, then specify, verify, and own what I ship.",
   ],
 };
 
 /** Work experience, most recent first. */
 export const experience = [
   {
-    role: "Senior Web Developer",
-    company: "Example Studio",
-    companyUrl: "https://example.com",
-    period: "2022 — Present",
+    role: "Software Engineer / Programmer II",
+    company: "UCAR / NSF NCAR",
+    companyUrl: "https://ncar.ucar.edu",
+    period: "2019 — Present",
     summary:
-      "Lead front-end development for client projects, mentoring junior developers and setting standards for accessibility and performance.",
+      "Sole developer and project lead of the visitor-management platform used across all NSF NCAR labs, plus the lab's broader administrative application suite. Recognized with an NCAR Special Recognition Award (2026).",
     highlights: [
-      "Cut average page load time by 40% across the main client portfolio.",
-      "Established an accessibility checklist now used company-wide.",
-      "Built a reusable component library that sped up project delivery.",
+      "Architected and built an organization-wide visitor-management platform from scratch; in continuous production with 60+ solo, end-to-end releases.",
+      "Generalized a single-lab tool into a config-driven, multi-tenant platform now serving 8+ NCAR labs.",
+      "Ran a zero-data-loss production cutover — migrated 3,113 visit records and 8,799 users with smoke tests, 35 preserved URLs, and DNS repointing.",
+      "Modernized the stack end to end: PHP 7.1→8.3, Composer/Symfony, SVN→Git, a containerized dev environment, and SAML 2.0 SSO against Azure Entra ID.",
+      "Build with AI daily: custom Claude Code agent skills, a self-hosted RAG Slack bot, AI-assisted legacy modernization, and the org's AI guidance docs.",
+    ],
+  },
+  {
+    role: "Senior Web Application Developer",
+    company: "Sounds True",
+    companyUrl: "https://www.soundstrue.com",
+    period: "2017 — 2019",
+    summary:
+      "Principal developer for the custom online courses and events platform; managed media-delivery infrastructure and mentored junior developers.",
+    highlights: [
+      "Led the course platform from prototype to production — a custom JavaScript single-page app on a LAMP/AWS back end that handled 30,000 users in a single day for live broadcasts.",
+      "Built a migration tool that moved 100+ courses and 130,000 user accounts, operable by front-end developers themselves.",
+      "Engineered a schedulable multi-video delivery player that automated a manual broadcast process, saving 40–50 hours per month.",
+    ],
+  },
+  {
+    role: "Web Application Developer",
+    company: "Sounds True",
+    companyUrl: "https://www.soundstrue.com",
+    period: "2011 — 2017",
+    summary:
+      "Led the front-end team, then moved to back-end development; Agile/Scrum throughout.",
+    highlights: [
+      "Implemented the company-wide online media management system (JW Platform, AWS S3) — ~$120,000/year in savings and 30+ TB/month of adaptive streaming.",
+      "Built and ran a live streaming broadcast system supporting 30,000+ concurrent viewers (PHP, JavaScript, Cassandra, AWS, Akamai).",
+      "Replatformed three major systems including two ecommerce sites; conceived a radio app that added ~$40,000/year in new revenue.",
     ],
   },
   {
     role: "Web Developer",
-    company: "Another Company",
-    companyUrl: "https://example.com",
-    period: "2019 — 2022",
+    company: "Sounds True",
+    companyUrl: "https://www.soundstrue.com",
+    period: "2006 — 2011",
     summary:
-      "Built and maintained marketing sites and internal tools for a fast-growing SaaS company.",
+      "Launched the company's first digital product and its first live online video broadcast.",
     highlights: [
-      "Migrated a legacy site to a modern static-site stack.",
-      "Implemented automated testing that reduced regressions.",
-      "Collaborated closely with design to ship pixel-accurate UIs.",
+      "Built the company's first digital product — a custom online audio download store — and its first live online video broadcast.",
+      "Managed email marketing to lists of up to 100,000, averaging ~$40,000/month in direct revenue.",
+      "Cut course design implementation from 2–3 days to 2–3 hours per course with templated assets and automated delivery.",
     ],
   },
   {
-    role: "Junior Developer",
-    company: "First Job Ltd.",
-    companyUrl: "https://example.com",
-    period: "2017 — 2019",
+    role: "Founder & Web Developer / Designer",
+    company: "TinkerMedia & earlier studios",
+    period: "2000 — 2006",
     summary:
-      "Started my career building responsive websites for small businesses.",
+      "Founded a freelance web and media studio serving 20+ small-business clients; earlier, multimedia and design roles at Zeitgeist Design and E-Vitro/DigitalMed.",
     highlights: [
-      "Delivered 20+ responsive websites for local businesses.",
-      "Learned the fundamentals of HTML, CSS, JavaScript, and Git.",
+      "Ran full-stack web development and design for 20+ clients on LAMP/cPanel — sites, ecommerce, Flash animation, and internet marketing.",
+      "Built rich internet applications and brand/identity work at a Boulder design firm.",
     ],
   },
 ];
@@ -96,6 +123,36 @@ export const experience = [
  * to the `category` line. `image` is relative to /public.
  */
 export const projects = [
+  {
+    title: "NRIT Visit App",
+    category: "Multi-tenant platform",
+    date: "2024 — Present",
+    featured: true,
+    description: "An organization-wide visitor-management platform serving all NSF NCAR labs. Config-driven multi-tenant architecture, containerized, with SAML SSO and a NIST 800-171 CUI-compliant production deployment. Architect and lead developer — recognized with an NCAR Special Recognition Award.",
+    tech: ["PHP 8.3", "MariaDB", "Symfony", "SAML 2.0 SSO", "Docker", "Caddy", "REST APIs"],
+  },
+  {
+    title: "Wiki RAG Slack Bot",
+    category: "Applied AI / retrieval",
+    date: "2026",
+    featured: true,
+    description: "A self-hosted retrieval-augmented-generation bot answering questions over an internal Confluence wiki. Hybrid full-text and embedding retrieval with hierarchy-aware chunking, incremental sync, a local LLM via Ollama, and an 81-test suite. Indexes 793 wiki pages in ~13 minutes on CPU.",
+    tech: ["Python", "PostgreSQL", "Embeddings", "Ollama", "Confluence API", "pytest"],
+  },
+  {
+    title: "Claude Code Agent Skills",
+    category: "Applied AI / agent workflows",
+    date: "2026",
+    description: "Custom Claude Code agent skills that maintain organizational AI documentation. Each parses unstructured input — websites, GitHub READMEs, wiki and KB pages — classifies it against tracker state, and proposes reviewed edits before writing.",
+    tech: ["Claude Code", "Agent skills", "MCP"],
+  },
+  {
+    title: "RAL-IT Portal & “App Engine”",
+    category: "Custom PHP MVC platform",
+    date: "2020 — 2024",
+    description: "A centralized administrative platform replacing undocumented legacy intranet apps, built on a custom PHP MVC framework — routing, auth, a form engine, and reusable AJAX table widgets — integrating Workday, the person directory, and Request Tracker via automated cron pipelines.",
+    tech: ["PHP", "MariaDB", "Custom MVC", "REST APIs", "Cron pipelines"],
+  },
   {
     title: "Reporting Dashboard",
     category: "Back-office web app",
@@ -435,20 +492,28 @@ export const projects = [
 /** Skills, grouped by category. */
 export const skills = [
   {
-    category: "Languages & markup",
-    items: ["JavaScript", "PHP", "HTML", "CSS", "SQL", "SVG"],
+    category: "Languages",
+    items: ["PHP (4–8.3)", "JavaScript", "SQL", "Python", "Bash", "Perl (legacy)"],
   },
   {
-    category: "Frameworks & platforms",
-    items: ["jQuery", "AJAX", "WordPress", "Node.js", "React", "Vue", "Angular"],
+    category: "Frameworks & libraries",
+    items: ["Custom MVC", "Laravel", "Symfony components", "Composer / PSR-4", "WordPress", "Magento", "jQuery / AJAX"],
+  },
+  {
+    category: "Applied AI",
+    items: ["Claude Code (agent skills, subagents)", "Gemini", "RAG (hybrid retrieval, embeddings)", "Ollama (local LLMs)", "MCP", "AI-assisted modernization"],
   },
   {
     category: "Data & infrastructure",
-    items: ["MySQL", "Cassandra", "REST APIs", "AWS (S3, CloudFront)", "RTMP"],
+    items: ["MariaDB / MySQL", "PostgreSQL", "Docker / Podman", "nginx / Apache / Caddy", "AWS (EC2, RDS, S3, CloudFront)", "Linux"],
   },
   {
-    category: "Media & integrations",
-    items: ["JW Player", "JW Platform API", "Live broadcasting", "Magento API"],
+    category: "Identity & security",
+    items: ["SAML 2.0 SSO (Azure Entra ID)", "OAuth", "LDAP", "NIST 800-171 / CUI", "CSP & secrets management", "SQL-injection remediation"],
+  },
+  {
+    category: "Integration & process",
+    items: ["REST API design & integration", "Cron sync pipelines", "Git / GitHub", "Jira", "Agile / Scrum", "Technical writing"],
   },
 ];
 
@@ -459,12 +524,12 @@ export const skills = [
 export const contact = {
   heading: "Let's work together",
   blurb:
-    "I'm open to freelance projects and full-time roles. Drop me a line and I'll get back to you.",
+    "I'm always glad to talk engineering, applied AI, and interesting problems. Drop me a line and I'll get back to you.",
   email: "daniel@danielwatts.dev",
   github: "https://github.com/daniel-watts?tab=repositories",
   linkedin: "https://www.linkedin.com/in/daniel-watts-87643618/",
   /** Optional: link to your dev blog. Leave "" to hide. */
   blog: "https://dev.wattswork.com/",
   /** Optional: a downloadable CV/resume in /public, e.g. "/resume.pdf". Leave "" to hide. */
-  resume: "",
+  resume: "/resume.pdf",
 };
