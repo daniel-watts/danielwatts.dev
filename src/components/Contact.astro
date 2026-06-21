@@ -26,6 +26,7 @@ const links = [
             <a
               class="contact-link"
               href={link.href}
+              target={link.href.startsWith("mailto:") ? null : "_blank"}
               rel={link.href.startsWith("mailto:") ? null : "noopener noreferrer"}
             >
               <span class="label">{link.label}</span>
