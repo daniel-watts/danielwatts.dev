@@ -43,7 +43,7 @@ export const about = {
   heading: "About me",
   paragraphs: [
     "I'm a senior software engineer with 20+ years building and modernizing production web applications. I started in design, so my work spans the whole experience, from UI/UX and front end through back end and infrastructure. I tend to own things end to end: architecture, code, deployment, security, documentation, and the stakeholder side.",
-    "At NSF NCAR I'm the sole developer and project lead of an organization-wide visitor-management platform. I architected it, designed its workflows and interfaces, containerized it, and have shipped 60+ production releases into a NIST 800-171 CUI-compliant environment. Before that I spent 13 years at Sounds True building custom course, commerce, and live-streaming media platforms, including systems that served over 30,000 users.",
+    "At NSF NCAR I'm the sole developer and project lead of an organization-wide visitor-management platform. I architected it, designed its workflows and interfaces, containerized it, and have shipped 60+ production releases into a NIST 800-171 CUI-compliant environment. Before that I spent 13 years at Sounds True, a multimedia publisher, where I built custom course, commerce, and live-streaming media platforms, including systems that served over 30,000 users.",
     "These days I build with AI daily: custom Claude Code agent skills, AI-assisted modernization of legacy code, and a self-hosted RAG retrieval pipeline, alongside writing my organization's AI guidance. The throughline across 20 years is the same: learn a new technology fast, then specify, verify, and own what I ship.",
   ],
 };
